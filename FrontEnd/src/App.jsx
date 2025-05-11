@@ -8,7 +8,7 @@ import "./App.css";
 import { Context } from "./main";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Home from "./pages/home.jsx";
+import Home from "./pages/Home.jsx";
 import Appointment from "./Pages/Appointment";
 import AboutUs from "./Pages/AboutUs";
 import Register from "./Pages/Register";
