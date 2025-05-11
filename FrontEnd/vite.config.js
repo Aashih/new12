@@ -12,7 +12,7 @@ export default defineConfig({
       },
     },
     allowedHosts: [
-      'new12-2-ib79.onrender.com',  // Add your Render domain here
+      'fnrtend1.onrender.com',  // Add your Render domain here
     ],
   },
   plugins: [react()],
