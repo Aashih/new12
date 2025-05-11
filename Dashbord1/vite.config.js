@@ -12,7 +12,7 @@ export default defineConfig({
       },
     },
     allowedHosts: [
-      'dashboard-vmc6.onrender.com',  // Add your Render domain here
+      'dashboard-vmc6-5nyx.onrender.com',  // Add your Render domain here
     ],
   },
   plugins: [react()],
