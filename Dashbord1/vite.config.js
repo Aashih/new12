@@ -10,7 +10,11 @@ export default defineConfig({
         secure: false,
       },
     },
-    allowedHosts: 'all', // Allow all hosts
+    allowedHosts: [
+  'fnrtend1.onrender.com',
+  'prateekdash.onrender.com'
+  ,
+]
   },
   plugins: [react()],
 });
