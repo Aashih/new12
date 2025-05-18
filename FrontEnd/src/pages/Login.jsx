@@ -18,7 +18,7 @@ const Login = () => {
     try {
       await axios
         .post(
-          "http://localhost:4000/api/v1/user/login",
+         "https://prateekbackend.onrender.com/api/v1/user/patient/register",
           { email, password, confirmPassword, role: "Patient" },
           {
             withCredentials: true,
