@@ -11,7 +11,6 @@ export default defineConfig({
       },
     },
     allowedHosts: [
-  'fnrtend1.onrender.com',
   'prateekdash.onrender.com'
   ,
 ]
