@@ -78,13 +78,27 @@ config({ path: "./config.env" });
 // );
 
 
+const allowedOrigins = [
+  process.env.FRONTEND_URL_ONE,
+  process.env.FRONTEND_URL_TWO,
+ 
+];
+
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"],
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
 );
+app.options("*", cors()); // for preflight
+
 
 app.use(cookieParser());
 app.use(express.json());

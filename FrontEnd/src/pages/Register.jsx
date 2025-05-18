@@ -23,7 +23,7 @@ const Register = () => {
     try {
       await axios
         .post(
-          "https://new12-backend.onrender.com/api/v1/user/patient/register",
+          "http://localhost:4000/api/v1/user/patient/register",
           { firstName, lastName, email, phone, nic, dob, gender, password ,role: "Patient"},// roles hata denge ager code eski vajah se dikket me hai to
           {
             withCredentials: true,
