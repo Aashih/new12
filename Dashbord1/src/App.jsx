@@ -20,7 +20,7 @@
 //     const fetchUser = async () => {
 //       try {
 //         const response = await axios.get(
-//           "https://new12-backend.onrender.com/api/v1/user/admin/me",
+//           "https://prateekbackend.onrender.com/api/v1/user/admin/me",
 //           { withCredentials: true }
 //         );
 //         setIsAuthenticated(true);
@@ -75,7 +75,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "https://new12-backend.onrender.com/api/v1/user/admin/me",
+          "https://prateekbackend.onrender.com/api/v1/user/admin/me",
           {
             withCredentials: true, // ✅ This is required to send cookies
           }

@@ -19,7 +19,7 @@ const Login = () => {
         .post(
           // 1) Make sure you actually have a backend running at port 4000
           // 2) Check your route: /api/v1/user/login
-          "https://new12-backend.onrender.com/api/v1/user/login",
+          "https://prateekbackend.onrender.com/api/v1/user/login",
           { email, password, confirmPassword, role: "Admin" },
           {
             withCredentials: true,

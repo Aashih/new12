@@ -11,7 +11,7 @@ const Messages = () => {
     const fetchMessages = async () => {
       try {
         const { data } = await axios.get(
-          "https://new12-backend.onrender.com/api/v1/message/getall",
+          "https://prateekbackend.onrender.com/api/v1/message/getall",
           { withCredentials: true }
         );
         setMessages(data.messages);

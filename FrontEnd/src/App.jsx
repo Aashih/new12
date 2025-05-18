@@ -20,7 +20,7 @@ const App = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get("https://new12-backend.onrender.com/api/v1/user/patient/me", {
+        const response = await axios.get("https://prateekbackend.onrender.com/api/v1/user/patient/me", {
           withCredentials: true,
         });
         setIsAuthenticated(true);
