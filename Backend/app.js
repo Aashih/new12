@@ -20,7 +20,6 @@
 //   })
 // );
 
-
 // app.use(
 //   cors({
 //     origin: ['http://localhost:5173'],
@@ -28,7 +27,6 @@
 //     credentials: true,
 //   })
 // );
-
 
 // app.use(cookieParser());
 // app.use(express.json());
@@ -48,10 +46,6 @@
 
 // app.use(errorMiddleware);
 // export default app;
-
-
-
-
 
 import express from "express";
 import { dbConnection } from "./database/dbConnections.js";
@@ -78,27 +72,14 @@ config({ path: "./config.env" });
 // );
 
 
-const allowedOrigins = [
-  process.env.FRONTENT_URL,
-  process.env.DASHBOARD1_URL,
- 
-];
-
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
+    origin: "https://fnntend1.onrender.com",
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
 );
 app.options("*", cors()); // for preflight
-
 
 app.use(cookieParser());
 app.use(express.json());
@@ -122,6 +103,3 @@ dbConnection();
 app.use(errorMiddleware);
 
 export default app;
-
-
-
