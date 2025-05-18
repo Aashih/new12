@@ -79,8 +79,8 @@ config({ path: "./config.env" });
 
 
 const allowedOrigins = [
-  process.env.FRONTEND_URL_ONE,
-  process.env.FRONTEND_URL_TWO,
+  process.env.FRONTENT_URL,
+  process.env.DASHBOARD1_URL,
  
 ];
 
