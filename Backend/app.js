@@ -74,14 +74,14 @@ config({ path: "./config.env" });
 
 app.use(
   cors({
-    origin: "https://fnrtend1.onrender.com/",
+    origin: "https://fnrtend1.onrender.com",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
 
 app.options("*", cors({
-  origin: "https://fnrtend1.onrender.com/",
+  origin: "https://fnrtend1.onrender.com",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
