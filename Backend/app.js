@@ -74,12 +74,18 @@ config({ path: "./config.env" });
 
 app.use(
   cors({
-    origin: "https://fnntend1.onrender.com",
-    methods: ["GET", "POST", "DELETE", "PUT"],
+    origin: "https://fnrtend1.onrender.com/",
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
-app.options("*", cors()); // for preflight
+
+app.options("*", cors({
+  origin: "https://fnrtend1.onrender.com/",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+}));
+
 
 app.use(cookieParser());
 app.use(express.json());
